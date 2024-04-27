@@ -14,8 +14,6 @@ export default async function MoviePage({ params }) {
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-
-  console.log(movie);
   return (
     <div className="w-full">
       <div className="flex flex-col p-4 lg:pt-8 lg:flex-row content-center max-w-6xl mx-auto lg:space-x-6">
