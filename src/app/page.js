@@ -1,6 +1,5 @@
 import Results from "@/components/Results/Results";
 import React, { Suspense } from "react";
-import { SuspenseProps } from "react";
 
 const API_KEY = process.env.API_KEY;
 

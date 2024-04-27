@@ -1,5 +1,5 @@
 import Results from "@/components/Results/Results";
-import React from "react";
+import React, { Suspense } from "react";
 
 const API_KEY = process.env.API_KEY;
 
@@ -13,11 +13,13 @@ export default async function SearchPage({ params }) {
   const data = await res.json();
   const movies = data.results;
   return (
-    <div>
-      {movies && movies.length === 0 && (
-        <h1 className="text-center pt-6">No results found.</h1>
-      )}
-      {movies && <Results results={movies} />}
-    </div>
+    <Suspense>
+      <div>
+        {movies && movies.length === 0 && (
+          <h1 className="text-center pt-6">No results found.</h1>
+        )}
+        {movies && <Results results={movies} />}
+      </div>
+    </Suspense>
   );
 }
