@@ -7,7 +7,7 @@ export default function Card({ result }) {
   return (
     <div
       className="p-4 group cursor-pointer sm:hover:shadow-neutral-700
-    sm:shadow-md rounded-lg"
+    sm:shadow-md rounded-lg sm:border border-neutral-500 sm:m-2 transition-shadow duration-200"
     >
       <Link href={`/movie/${result.id}`}>
         <div>
@@ -23,9 +23,9 @@ export default function Card({ result }) {
         </div>
       </Link>
       <div className="p-2">
-        <h1 className="text-xl font-semibold truncate">
+        <h2 className="text-lg font-semibold truncate">
           {result.title || result.original_name}
-        </h1>
+        </h2>
         <p className="flex items-center text-sm">
           {result.release_date || result.first_air_date}
           <FiThumbsUp className="h-5 mr-1 ml-3" />
