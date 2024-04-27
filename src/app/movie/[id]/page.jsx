@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Suspense } from "react";
 
 const API_KEY = process.env.API_KEY;
 
@@ -15,6 +16,7 @@ export default async function MoviePage({ params }) {
     throw new Error("Failed to fetch data");
   }
   return (
+    <Suspense>
     <div className="w-full">
       <div className="flex flex-col p-4 lg:pt-8 lg:flex-row content-center max-w-6xl mx-auto lg:space-x-6">
         <Image
@@ -56,5 +58,6 @@ export default async function MoviePage({ params }) {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 }
