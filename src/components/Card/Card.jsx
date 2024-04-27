@@ -17,7 +17,7 @@ export default function Card({ result }) {
           alt={`${result.title}`}
           width={500}
           height={300}
-          className="sm:rounded-t-lg w-full group-hover:opacity-75 transition-opacity duration-300"
+          className="rounded-t-lg sm:rounded-t-lg w-full group-hover:opacity-75 transition-opacity duration-300"
         ></Image>
 
         <div className="p-2">
